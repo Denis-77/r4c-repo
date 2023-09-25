@@ -6,7 +6,7 @@
 </head>
 <body>
   <h2>Add New Robot</h2>
-  <form method="post" action="{% url 'robot_json' %}">
+  <form id="Form" method="post" action="{% url 'robot_json' %}" enctype="application/json">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Send</button>

@@ -18,7 +18,6 @@ class RobotView(View):
     def post(self, request):
         form = NewRobotForm(request.POST)
         if form.is_valid():
-            print('!!!!!!!!!!')
             data = form.cleaned_data.get('json_string')
             robot_dict = json.loads(data)
             Robot.objects.create(

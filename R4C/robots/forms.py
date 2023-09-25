@@ -6,7 +6,7 @@ from django.core.exceptions import ValidationError
 
 
 class NewRobotForm(forms.Form):
-    json_string = forms.CharField(label='JSON', required=True)
+    json_string = forms.CharField(label='JSON', required=True, widget=forms.TextInput(attrs={"size": "50"}))
 
     def clean(self):
         cleaned_data = super(NewRobotForm, self).clean()
